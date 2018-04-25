@@ -1,0 +1,49 @@
+{
+  "name": "cache-ttl",
+  "version": "1.0.0",
+  "description": "The key-vaue storage, allowing you to add, modify or delete stored data items.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/motiejunas/cache-ttl.git"
+  },
+  "keywords": [
+    "cache",
+    "ttl",
+    "storage",
+    "store"
+  ],
+  "scripts": {
+    "tsc": "tsc",
+    "start": "",
+    "build": "tsc",
+    "test": "jest"
+  },
+  "author": "Irmantas Motiejunas",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^22.2.3",
+    "@types/node": "^9.6.6",
+    "jest": "^22.4.3",
+    "ts-jest": "^22.4.4",
+    "tslint": "^5.9.1",
+    "tslint-config-airbnb": "^5.8.0",
+    "typescript": "^2.8.3"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  }
+}
