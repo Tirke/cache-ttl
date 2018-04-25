@@ -25,4 +25,4 @@ var Cache = /** @class */ (function () {
     Cache.cache = {};
     return Cache;
 }());
-exports.Cache = Cache;
+exports.default = Cache;

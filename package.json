@@ -1,7 +1,7 @@
 {
   "name": "cache-ttl",
-  "version": "1.0.0",
-  "description": "The key-vaue storage, allowing you to add, modify or delete stored data items.",
+  "version": "1.0.1",
+  "description": "The key-value storage, allowing you to add, modify or delete stored data items.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "repository": {
@@ -16,7 +16,7 @@
   ],
   "scripts": {
     "tsc": "tsc",
-    "start": "",
+    "prepublish": "npm run build",
     "build": "tsc",
     "test": "jest"
   },

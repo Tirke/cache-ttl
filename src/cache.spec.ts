@@ -1,4 +1,4 @@
-import { Cache } from '.';
+import Cache from '.';
 
 describe('cache util', () => {
   test('should save item', () => {

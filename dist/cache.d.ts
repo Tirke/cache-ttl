@@ -1,4 +1,4 @@
-export declare class Cache {
+declare class Cache {
     private static cache;
     private constructor();
     static readonly count: number;
@@ -7,3 +7,4 @@ export declare class Cache {
     static remove(key: string): void;
     static clear(): void;
 }
+export default Cache;

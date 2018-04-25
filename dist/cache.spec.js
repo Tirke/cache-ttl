@@ -3,31 +3,31 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var _1 = require(".");
 describe('cache util', function () {
     test('should save item', function () {
-        _1.Cache.set('hello', 'world');
-        expect(_1.Cache.get('hello')).toBe('world');
-        expect(_1.Cache.count).toBe(1);
+        _1.default.set('hello', 'world');
+        expect(_1.default.get('hello')).toBe('world');
+        expect(_1.default.count).toBe(1);
     });
     test('should save any object', function () {
         var now = new Date();
-        _1.Cache.set('hello', now);
-        expect(_1.Cache.get('hello')).toBe(now);
+        _1.default.set('hello', now);
+        expect(_1.default.get('hello')).toBe(now);
     });
     test('should count unique keys', function () {
-        _1.Cache.set('hello', 'world');
-        _1.Cache.set('hello', 'world');
-        _1.Cache.set('hi', 'world');
-        _1.Cache.set('hey', 'world');
-        expect(_1.Cache.count).toBe(3);
+        _1.default.set('hello', 'world');
+        _1.default.set('hello', 'world');
+        _1.default.set('hi', 'world');
+        _1.default.set('hey', 'world');
+        expect(_1.default.count).toBe(3);
     });
     test('should remove item', function () {
-        _1.Cache.set('hello', 'world');
-        _1.Cache.remove('hello');
-        expect(_1.Cache.get('hello')).toBeUndefined();
+        _1.default.set('hello', 'world');
+        _1.default.remove('hello');
+        expect(_1.default.get('hello')).toBeUndefined();
     });
     test('should clear all cache', function () {
-        _1.Cache.set('hello', 'world');
-        _1.Cache.set('hi', 'world');
-        _1.Cache.clear();
-        expect(_1.Cache.length).toBe(0);
+        _1.default.set('hello', 'world');
+        _1.default.set('hi', 'world');
+        _1.default.clear();
+        expect(_1.default.length).toBe(0);
     });
 });

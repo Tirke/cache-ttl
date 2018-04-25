@@ -1,4 +1,4 @@
-export class Cache {
+class Cache {
   private static cache: { [key: string]: any; } = {};
 
   private constructor() { }
@@ -23,3 +23,5 @@ export class Cache {
     this.cache = {};
   }
 }
+
+export default Cache;
