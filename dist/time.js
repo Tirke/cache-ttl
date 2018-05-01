@@ -21,6 +21,13 @@ var Time = /** @class */ (function () {
             this.unwatch(key);
         }
     };
+    Object.defineProperty(Time, "countWatchers", {
+        get: function () {
+            return Object.keys(this.timers).length;
+        },
+        enumerable: true,
+        configurable: true
+    });
     Time.timers = {};
     return Time;
 }());

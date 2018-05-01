@@ -42,6 +42,9 @@ var Cache = /** @class */ (function (_super) {
         this.unwatchAll();
         this.cache = {};
     };
+    Cache.toString = function () {
+        return "Cached " + this.count + " items (" + this.countWatchers + " will expire).";
+    };
     Cache.cache = {};
     return Cache;
 }(time_1.default));

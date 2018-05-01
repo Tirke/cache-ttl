@@ -33,6 +33,10 @@ class Cache extends Time {
     this.unwatchAll();
     this.cache = {};
   }
+
+  static toString(): string {
+    return `Cached ${this.count} items (${this.countWatchers} will expire).`;
+  }
 }
 
 export default Cache;
