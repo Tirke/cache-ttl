@@ -1,24 +1,22 @@
 {
   "name": "cache-ttl",
-  "version": "1.0.1",
-  "description": "The key-value storage, allowing you to add, modify or delete stored data items.",
+  "version": "1.0.6",
+  "description": "The key-value storage with TTL support, allowing you to add, modify or delete stored data items.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/motiejunas/cache-ttl.git"
   },
-  "keywords": [
-    "cache",
-    "ttl",
-    "storage",
-    "store"
-  ],
   "scripts": {
     "tsc": "tsc",
-    "prepublish": "npm run build",
+    "prebuild": "rimraf dist",
     "build": "tsc",
-    "test": "jest"
+    "test": "jest",
+    "start:js": "npm run build && node examples/javascript.js",
+    "start:ts": "npm run build && ts-node examples/typescript.ts",
+    "prepublishOnly": "npm test && npm run build",
+    "precommit": "npm test && npm run build"
   },
   "author": "Irmantas Motiejunas",
   "license": "ISC",
@@ -26,11 +24,22 @@
     "@types/jest": "^22.2.3",
     "@types/node": "^9.6.6",
     "jest": "^22.4.3",
+    "rimraf": "^2.6.2",
     "ts-jest": "^22.4.4",
+    "ts-node": "^6.0.2",
     "tslint": "^5.9.1",
     "tslint-config-airbnb": "^5.8.0",
     "typescript": "^2.8.3"
   },
+  "keywords": [
+    "cache",
+    "ttl",
+    "storage",
+    "store",
+    "redis",
+    "key-value",
+    "localstorage"
+  ],
   "jest": {
     "testEnvironment": "node",
     "transform": {

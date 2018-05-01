@@ -1,2 +1,4 @@
+tslint.json
 tsconfig.json
 src
+examples
