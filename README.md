@@ -3,7 +3,7 @@
 [![npm version](https://img.shields.io/npm/v/cache-ttl.svg?style=flat-square)](https://www.npmjs.org/package/cache-ttl)
 [![npm downloads](https://img.shields.io/npm/dm/cache-ttl.svg?style=flat-square)](http://npm-stat.com/charts.html?package=cache-ttl)
 
-The key-value storage, allowing you to add, modify or delete stored data items.
+The key-value storage with TTL (time to live) support, allowing you to add, modify or delete stored data items.
 
 ## Install
 
