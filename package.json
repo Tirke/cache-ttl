@@ -1,6 +1,6 @@
 {
   "name": "cache-ttl",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "The key-value storage with TTL support, allowing you to add, modify or delete stored data items.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -12,7 +12,7 @@
     "tsc": "tsc",
     "prebuild": "rimraf dist",
     "build": "tsc",
-    "test": "jest",
+    "test": "clear && jest",
     "start:js": "npm run build && node examples/javascript.js",
     "start:ts": "npm run build && ts-node examples/typescript.ts",
     "prepublishOnly": "npm test && npm run build",

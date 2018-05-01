@@ -37,6 +37,7 @@ console.log(Cache.get<string>('foo'));
 ## Advanced usage
 
 ```js
+Cache.set('foo', 'bar', 10); // Will expire after 10 seconds
 Cache.count(); // Count items
 Cache.remove('foo'); // Remove item by key
 Cache.clear(); // Flush cache

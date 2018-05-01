@@ -1,5 +1,7 @@
 import Cache from './cache';
 
+jest.useFakeTimers();
+
 describe('cache util', () => {
   test('should save item', () => {
     Cache.set('hello', 'world');
@@ -37,5 +39,14 @@ describe('cache util', () => {
     Cache.clear();
 
     expect(Cache.length).toBe(0);
+  });
+
+  test('should expire after TTL duration', () => {
+    Cache.set('hello', 'world', 10);
+    jest.advanceTimersByTime(10 * 1000);
+
+    expect(setTimeout).toHaveBeenCalledTimes(1);
+    expect(setTimeout).toHaveBeenLastCalledWith(expect.any(Function), 10 * 1000);
+    expect(Cache.get<string>('hello')).toBeUndefined();
   });
 });
